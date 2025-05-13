@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html, body {
+    font-family: "Poppins", sans-serif;
+    background-color:#004c54;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff; /* Bright font */
+    /* font-family: 'Segoe UI', sans-serif; */
+    margin: 0;
+    padding: 1rem;
+  }
+  main {
+    flex: 1; /* Takes up available space */
+  }
+  body {
+    flex: 1;
+  }
+
+
+nav {
+  padding: 20px 5%; /* Added more padding from top */
+  margin-left: 20px 5%; /* Added more padding from top */
+  background-color: #004F5F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  z-index: 10;
+  position: relative;
+  border-radius: 10px; /* Optional: added a border radius for rounded corners */
+  margin-top: 20px; /* Added some gap from the top */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+  
+}
+
+nav:hover {
+  background-color: #006678; /* Darker shade on hover */
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 30px;
+  margin-right: 10px;
+  filter: drop-shadow(1px 1px 2px black); /* Shadow to enhance visibility */
+}
+
+nav .logo h1 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Optional: added a border radius for rounded corners */
+.logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .logo a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s ease; /* Added transition for smooth color change */
+}
+
+.nav-links a:hover {
+  color: #00BFFF; /* Light blue color on hover */
+    text-decoration: underline; /* Underline effect on hover */
+  transform: scale(1.05); /* Slightly enlarge the text on hover */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Shadow effect on hover */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004F5F;
+  display: none;
+  list-style: none;
+  min-width: 160px;
+  z-index: 1000;
+  
+}
+
+.dropdown-menu li a {
+  padding: 10px;
+  border-bottom: 1px solid #003366;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 6px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 60%;
+  height: 100vh;
+  background: #003366;
+  padding-top: 60px;
+  transition: left 0.5s ease-in-out;
+  z-index: 9;
+}
+
+.menubar ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menubar ul li {
+  margin-bottom: 30px;
+}
+
+.menubar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* For containers */
+
+      /* body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f9f9;
+      padding: px;
+    } */
+    .container {
+        display: flex;
+        gap: 20px;
+        padding: 20px 5%; /* Similar padding as the nav bar */
+        background-color: #004f5f; /* Same background color as the nav bar */
+        border-radius: 8px; /* Adding border radius for consistency */
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Same shadow as the nav bar */
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px; /* Matching margin-top to keep some space from the top */
+        transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+      }
+
+      .container:hover {
+        background-color: #006678; /* Darker shade on hover, like the nav bar */
+      }
+
+      .section {
+        background-color: #fff;
+        padding: 30px;
+        padding-top: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        width: 48%;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          width: 100%;
+        }
+      }
+      .h2bms {
+color: #000000;
+
+}
+
+      h2 {
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+        font-family: monospace;
+        padding: 10px;
+        border: 1px solid #003b42; /* Slightly darker border than the background */
+        background-color: #003b42; /* Slightly darker background to blend with the nav */
+        color: white; /* White text color for contrast */
+        border-radius: 8px;
+        resize: vertical;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid #444;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #004f5f;
+        color: white;
+        text-align: left;
+      }
+      thead {
+        background-color: #004f5f;
+        color: white;
+        text-align: left;
+      }
+
+      .copy-button {
+        margin: 10px 0;
+        padding: 10px 18px;
+        font-size: 14px;
+        background-color: #004f5f;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .copy-button:hover {
+        background-color: #006678;
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          width: 100%;
+        }
+
+        textarea {
+          height: 120px;
+        }
+      }
+
+      .p{
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
+
+/* Add your styles here */
+
+.footer {
+    background-color: #004F5F;
+    padding: 10px 5%;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #007B8A;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 3px;
+    border-radius: 10px 10px 0 0;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  /* Add your styles here */
+.footer-link {
+    color: #00BFFF;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    
+  }
+  .footer-link a:hover {
+    color: #00BFFF; /* Light blue color on hover */
+      text-decoration: underline; /* Underline effect on hover */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Shadow effect on hover */
+  }
+  footer:hover {
+    background-color: #006678; /* Darker shade on hover */
+  }
+
+/* Responsive */
+@media screen and (max-width: 790px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .menubar.active {
+    left: 0;
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+
+.link-card-section {
+  padding: 40px 5%;
+  margin-top: 40px;
+}
+
+.section-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.link-card {
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+}
+
+.link-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.link-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.link-card li {
+  margin-bottom: 8px;
+}
+
+.link-card a {
+  color: #004FFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+/* Bright Background Color Variants */
+.bright-blue {
+  background-color: #d0eaff;
+}
+.bright-yellow {
+  background-color: #fff3cd;
+}
+.bright-green {
+  background-color: #d4edda;
+}
+.bright-purple {
+  background-color: #e6d6ff;
+}
+
+
+.link-card {
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white; /* or keep your bright-* backgrounds */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 8px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+mark {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+
+.search-bar {
+  width: 50%; /* Set the width to 50% */
+  margin: 0 auto; /* Center the search bar horizontally */
+  padding: 10px; /* Optional: padding for better spacing inside the search bar */
+  display: block; /* Ensure the search bar is displayed as a block element */
+  padding: 10px; width: 50%; margin-bottom:
+   20px; border-radius: 8px; border: 1px solid #ccc;
+   margin-top: 50px;
+}
