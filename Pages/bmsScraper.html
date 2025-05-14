@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object to Table Converter</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/index.html" class="logo no-decoration">
+          <img src="../images/logo.png" alt="logo" />
+          <h1>STIBO Dashboard</h1>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="/index.html">Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#">STIBO Workbench</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Prod Workbench</a></li>
+            <li><a href="#">Test Workbench</a></li>
+            <li><a href="#">QA Workbench</a></li>
+            <li><a href="#">Dev Workbench</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">BMC Portal</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Incident Management</a></li>
+            <li><a href="#">Smart</a></li>
+            <li><a href="#">QA Workbench</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Reports</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Daily Status</a></li>
+            <li><a href="#">Monthly Report</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="section">
+          <h2 class="h2bms">Incident Count Object</h2>
+          <textarea
+            id="incidentCountInput"
+            placeholder="Paste the Incident Count object here..."
+          ></textarea>
+          <button class="copy-button" onclick="renderIncidentCount()">
+            Render & Copy Table
+          </button>
+          <div id="incidentCountTable"></div>
+        </div>
+
+        <div class="section">
+          <h2 class="h2bms">Aging Incidents Array</h2>
+          <textarea
+            id="agingIncidentsInput"
+            placeholder="Paste the Aging Incidents array here..."
+          ></textarea>
+          <button class="copy-button" onclick="renderAgingIncidents()">
+            Render & Copy Table
+          </button>
+          <div id="agingIncidentsTable"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2025 STIBO Dashboard. All rights reserved.</p>
+      <p>
+        <a href="/index.html" class="footer-link">Home</a> |
+        <a href="#" class="footer-link">Contact</a> |
+        <a href="#" class="footer-link">Privacy Policy</a>
+      </p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
